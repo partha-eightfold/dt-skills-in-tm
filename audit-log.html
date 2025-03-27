@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data & Privacy | Skills with DT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="audit-log.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-container">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-logo">
+                <img src="images/dt-logo.svg" alt="DT Logo" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Career Opportunities</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="nav-right">
+                <img src="images/avatar.png" alt="User Avatar" class="nav-avatar">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Audit Log Content -->
+    <main>
+        <div class="audit-container">
+            <!-- Audit Header -->
+            <div class="audit-header">
+                <a href="profile.html" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Profile
+                </a>
+                <div class="header-content">
+                    <h1>Data & Privacy Controls</h1>
+                    <p class="header-description">View, manage, and understand how your data is used to power career opportunities and insights.</p>
+                </div>
+            </div>
+
+            <!-- Information Panel -->
+            <div class="info-panel">
+                <div class="info-icon">ℹ️</div>
+                <div class="info-content">
+                    <h3>About Skills Data</h3>
+                    <p>Skills with DT uses data from your profile, work history, and activities to infer skills and match you with career opportunities. You have full control over this data and how it's used. This page gives you transparency into what data we have, where it came from, and how it's being used.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Filter -->
+            <div class="timeline-filter">
+                <span class="filter-label">Filter by:</span>
+                <div class="filter-options">
+                    <button class="filter-button active" data-filter="all">All Data</button>
+                    <button class="filter-button" data-filter="inferred">AI Inferred</button>
+                    <button class="filter-button" data-filter="manual">Manually Added</button>
+                </div>
+                <div class="filter-toggle">
+                    <input type="checkbox" id="recent-toggle">
+                    <label for="recent-toggle">Show recent changes only</label>
+                </div>
+            </div>
+
+            <!-- Skills Audit Section -->
+            <section class="audit-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <h2>Skills Audit</h2>
+                    </div>
+                    <button class="export-button">Export Data</button>
+                </div>
+
+                <div class="audit-table-container">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Skill</th>
+                                <th>Source</th>
+                                <th>Type</th>
+                                <th>Date Added</th>
+                                <th>Confidence</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="inferred-row" data-type="inferred">
+                                <td>User Experience Design</td>
+                                <td>Microsoft Teams App</td>
+                                <td><span class="badge inferred">AI Inferred</span></td>
+                                <td>May 15, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="95">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">95%</span>
+                                </td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="remove-button">Remove</button>
+                                </td>
+                            </tr>
+                            <tr class="inferred-row" data-type="inferred">
+                                <td>Figma</td>
+                                <td>Microsoft Teams App</td>
+                                <td><span class="badge inferred">AI Inferred</span></td>
+                                <td>May 15, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="88">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">88%</span>
+                                </td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="remove-button">Remove</button>
+                                </td>
+                            </tr>
+                            <tr class="inferred-row" data-type="inferred">
+                                <td>Interaction Design</td>
+                                <td>Microsoft Teams App</td>
+                                <td><span class="badge inferred">AI Inferred</span></td>
+                                <td>May 15, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="75">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">75%</span>
+                                </td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="remove-button">Remove</button>
+                                </td>
+                            </tr>
+                            <tr class="manual-row" data-type="manual">
+                                <td>Adobe Photoshop</td>
+                                <td>Manually added</td>
+                                <td><span class="badge manual">Manual</span></td>
+                                <td>Jan 10, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="100">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">100%</span>
+                                </td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="remove-button">Remove</button>
+                                </td>
+                            </tr>
+                            <tr class="manual-row" data-type="manual">
+                                <td>Prototyping</td>
+                                <td>Manually added</td>
+                                <td><span class="badge manual">Manual</span></td>
+                                <td>Jan 10, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="100">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">100%</span>
+                                </td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="remove-button">Remove</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="data-usage-panel">
+                    <h3>How Your Skills Data is Used</h3>
+                    <ul class="usage-list">
+                        <li><strong>Career Opportunities:</strong> Your skills are used to match you with relevant job opportunities that align with your expertise and career aspirations.</li>
+                        <li><strong>Growth Recommendations:</strong> We analyze skill trends in your industry to recommend learning opportunities that can enhance your career trajectory.</li>
+                        <li><strong>Network Insights:</strong> Your skills help us connect you with professionals who have complementary skillsets for potential collaboration.</li>
+                    </ul>
+                    <p>Skills data is refreshed whenever your profile is updated or when you complete new work experiences.</p>
+                    <div class="algorithm-info">
+                        <span class="algorithm-tag">Algorithm:</span> DT Skills Inference Engine v2.3, last updated March 2023
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Audit Section -->
+            <section class="audit-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <h2>Experience Audit</h2>
+                    </div>
+                    <button class="export-button">Export Data</button>
+                </div>
+
+                <div class="audit-table-container">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Experience</th>
+                                <th>Source</th>
+                                <th>Type</th>
+                                <th>Date Added</th>
+                                <th>Skills Inferred</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="manual-row" data-type="manual">
+                                <td>Microsoft Teams App Redesign</td>
+                                <td>Manually added</td>
+                                <td><span class="badge manual">Manual</span></td>
+                                <td>May 15, 2023</td>
+                                <td>3 skills</td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="view-button">View Details</button>
+                                </td>
+                            </tr>
+                            <tr class="manual-row" data-type="manual">
+                                <td>Product Designer at Microsoft</td>
+                                <td>Manually added</td>
+                                <td><span class="badge manual">Manual</span></td>
+                                <td>Jan 5, 2023</td>
+                                <td>5 skills</td>
+                                <td>
+                                    <button class="edit-button">Edit</button>
+                                    <button class="view-button">View Details</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="data-usage-panel">
+                    <h3>How Your Experience Data is Used</h3>
+                    <ul class="usage-list">
+                        <li><strong>Skill Inference:</strong> We analyze your work experiences to identify skills you've developed through your professional journey.</li>
+                        <li><strong>Career Trajectory:</strong> Your experience history helps us understand your career path and suggest relevant future opportunities.</li>
+                        <li><strong>Project Relevance:</strong> Similar projects and roles are used to connect you with opportunities that match your expertise.</li>
+                    </ul>
+                    <p>Experience data is one of the primary sources for skill inference and career recommendation algorithms.</p>
+                </div>
+            </section>
+
+            <!-- Opportunities Inference Section -->
+            <section class="audit-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        <h2>Inferred Opportunities</h2>
+                    </div>
+                    <button class="export-button">Export Data</button>
+                </div>
+
+                <div class="audit-table-container">
+                    <table class="audit-table">
+                        <thead>
+                            <tr>
+                                <th>Opportunity</th>
+                                <th>Match Reason</th>
+                                <th>Type</th>
+                                <th>Date Identified</th>
+                                <th>Match Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="inferred-row" data-type="opportunity">
+                                <td>Product Design Manager</td>
+                                <td>UX Design, Leadership Skills</td>
+                                <td><span class="badge inferred">AI Inferred</span></td>
+                                <td>May 15, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="92">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">92%</span>
+                                </td>
+                                <td>
+                                    <button class="view-button">View Details</button>
+                                </td>
+                            </tr>
+                            <tr class="inferred-row" data-type="opportunity">
+                                <td>Senior UX Designer</td>
+                                <td>Figma, UI/UX, Prototyping</td>
+                                <td><span class="badge inferred">AI Inferred</span></td>
+                                <td>May 15, 2023</td>
+                                <td>
+                                    <div class="confidence-bar" data-confidence="88">
+                                        <div class="confidence-level"></div>
+                                    </div>
+                                    <span class="confidence-text">88%</span>
+                                </td>
+                                <td>
+                                    <button class="view-button">View Details</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="data-usage-panel">
+                    <h3>How Opportunities Are Found For You</h3>
+                    <ul class="usage-list">
+                        <li><strong>Skill Matching:</strong> Your verified and inferred skills are matched against job requirements to find opportunities that fit your expertise.</li>
+                        <li><strong>Industry Alignment:</strong> We consider your industry experience and preferences when suggesting new opportunities.</li>
+                        <li><strong>Career Growth:</strong> Some opportunities are suggested to help you advance in your career trajectory, even if they require skill development.</li>
+                    </ul>
+                    <p>Opportunity matching is refreshed weekly and whenever your profile is significantly updated.</p>
+                    <div class="algorithm-info">
+                        <span class="algorithm-tag">Algorithm:</span> DT Opportunity Matching System v3.1, last updated April 2023
+                    </div>
+                </div>
+            </section>
+
+            <!-- Privacy Controls Section -->
+            <section class="audit-section">
+                <div class="section-header">
+                    <div class="section-title">
+                        <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <h2>Privacy Controls</h2>
+                    </div>
+                </div>
+
+                <p class="section-description">
+                    Control how your data is used and who can see your information. These settings affect how we find opportunities for you and how your profile appears to others.
+                </p>
+
+                <div class="privacy-options">
+                    <div class="privacy-option" data-option="AI Skill Inference">
+                        <div class="option-header">
+                            <h3>AI Skill Inference</h3>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <p class="option-description">
+                            Allow our AI to analyze your experience and activities to infer skills that may not be explicitly listed in your profile.
+                        </p>
+                    </div>
+
+                    <div class="privacy-option" data-option="Career Opportunity Matching">
+                        <div class="option-header">
+                            <h3>Career Opportunity Matching</h3>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <p class="option-description">
+                            Enable automatic matching with career opportunities based on your skills, experience, and preferences.
+                        </p>
+                    </div>
+
+                    <div class="privacy-option" data-option="Profile Visibility">
+                        <div class="option-header">
+                            <h3>Profile Visibility</h3>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <p class="option-description">
+                            Make your profile visible to recruiters and hiring managers who may have relevant opportunities.
+                        </p>
+                    </div>
+
+                    <div class="privacy-option" data-option="Data Sharing with Partners">
+                        <div class="option-header">
+                            <h3>Data Sharing with Partners</h3>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <p class="option-description">
+                            Allow sharing of your anonymized skill data with partner companies to improve opportunity matching.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="data-export-section">
+                    <h3>Export Your Data</h3>
+                    <p>You can download a complete copy of all data associated with your profile, including inferred skills, matched opportunities, and usage information.</p>
+                    <div class="data-buttons">
+                        <button class="primary-button">Export All Data</button>
+                        <button class="secondary-button">Request Data Deletion</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="audit-log.js"></script>
+</body>
+</html> 

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Career Opportunities | Skills with DT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Override padding-top for email page only */
+        body {
+            padding-top: 0;
+        }
+        
+        .progress-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #e2e8f0;
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .progress-circle::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3b82f6;
+            animation: spin 1s linear infinite;
+        }
+
+        .opportunity-lanes {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .opportunity-lane {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .lane-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .lane-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .lane-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .opportunity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .opportunity-item:hover {
+            background: #f1f5f9;
+            transform: translateY(-1px);
+        }
+
+        .opportunity-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .opportunity-name {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 16px;
+        }
+
+        .opportunity-skills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .skill-tag {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .opportunity-action {
+            font-size: 14px;
+            color: #3b82f6;
+            text-decoration: none;
+            white-space: nowrap;
+            margin-left: 16px;
+            margin-top: 8px;
+        }
+
+        .opportunity-action:hover {
+            text-decoration: underline;
+        }
+
+        .main-message h2 {
+            font-size: 24px;
+            line-height: 1.4;
+            color: #1e293b;
+            margin-bottom: 16px;
+        }
+
+        .opportunity-match {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .match-text {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .skill-tag.matched {
+            background: #e0f2fe;
+            color: #0284c7;
+            border: 1px solid #7dd3fc;
+            font-weight: 500;
+        }
+
+        .new-skills {
+            margin: 24px 0;
+            padding: 16px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .new-skills-label {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        
+        .skills-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-pill {
+            background: #e0f2fe;
+            color: #0284c7;
+            border: 1px solid #7dd3fc;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="email-preview">
+            <div class="email-header">
+                <img src="images/dt-logo.svg" alt="Company Logo" class="logo">
+                <div class="date">July 15, 2023</div>
+            </div>
+            
+            <div class="email-content">
+                <h1>Hey Leo,</h1>
+                
+                <div class="main-message">
+                    <h2>You have unlocked new opportunities through new skills added in the last week.</h2>
+                    <div class="new-skills">
+                        <div class="new-skills-label">New skills:</div>
+                        <div class="skills-pills">
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Cloud Architecture</span>
+                            <span class="skill-pill">MLOps</span>
+                            <span class="skill-pill">Data Analysis</span>
+                            <span class="skill-pill">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="opportunity-lanes">
+                    <div class="opportunity-lane">
+                        <div class="lane-header">
+                            <h3 class="lane-title">Jobs</h3>
+                        </div>
+                        <div class="lane-content">
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">Senior Data Scientist</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">SQL</span>
+                                            <span class="skill-tag matched">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="job-details.html?job=Senior%20Data%20Scientist" class="opportunity-action">View role</a>
+                            </div>
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">ML Engineering Lead</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">Cloud Architecture</span>
+                                            <span class="skill-tag matched">MLOps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="job-details.html?job=ML%20Engineering%20Lead" class="opportunity-action">View role</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-lane">
+                        <div class="lane-header">
+                            <h3 class="lane-title">Projects</h3>
+                        </div>
+                        <div class="lane-content">
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">Customer Churn Prediction</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">Data Analysis</span>
+                                            <span class="skill-tag matched">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="opportunity-action">Learn more</a>
+                            </div>
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">Recommendation Engine</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">Machine Learning</span>
+                                            <span class="skill-tag matched">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="opportunity-action">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opportunity-lane">
+                        <div class="lane-header">
+                            <h3 class="lane-title">Courses</h3>
+                        </div>
+                        <div class="lane-content">
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">Advanced Deep Learning Specialization</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">Machine Learning</span>
+                                            <span class="skill-tag matched">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="opportunity-action">Start learning</a>
+                            </div>
+                            <div class="opportunity-item">
+                                <div class="opportunity-info">
+                                    <div class="opportunity-name">MLOps & Model Deployment</div>
+                                    <div class="opportunity-match">
+                                        <div class="match-text">Unlocked by your new skills:</div>
+                                        <div class="opportunity-skills">
+                                            <span class="skill-tag matched">Cloud Architecture</span>
+                                            <span class="skill-tag matched">MLOps</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="opportunity-action">Start learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-content">
+                        <div class="info-left">
+                            <img src="images/info-image.svg" alt="Information" class="info-image">
+                        </div>
+                        <div class="info-right">
+                            <h3>How we use AI to enhance your profile</h3>
+                            <p>Watch this short video or read <a href="#" style="color: #3b82f6; text-decoration: underline;">faqs</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="email-footer">
+                <p>This email was sent to you as part of your career development program.</p>
+                <p>© 2023 Skills with DT</p>
+                <div class="email-navigation">
+                    <a href="index.html" class="email-nav-button">Go to App Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

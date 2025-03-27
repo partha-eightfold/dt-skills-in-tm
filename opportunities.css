@@ -1,0 +1,382 @@
+/* Opportunities Page Styles */
+.container {
+    max-width: 1000px;
+}
+
+.opportunities-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.opportunities-header .logo {
+    margin-bottom: 20px;
+}
+
+.opportunities-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.opportunities-header p {
+    color: #64748b;
+    font-size: 18px;
+}
+
+/* Career Path Section */
+.career-path-section {
+    background-color: #f8faff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid #e0e7ff;
+}
+
+.career-path-header {
+    margin-bottom: 30px;
+}
+
+.career-path-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.progress-container.large {
+    height: 50px;
+}
+
+.progress-container.large .progress-bar {
+    height: 16px;
+}
+
+.progress-container.large .progress-text {
+    font-size: 16px;
+}
+
+/* Skills Overview */
+.skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skills-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.skills-count {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card.acquired {
+    border-left: 4px solid #16a34a;
+}
+
+.skill-card.missing {
+    border-left: 4px solid #dc2626;
+    background-color: #fef2f2;
+    border-color: #fee2e2;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.skill-level {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skill-source {
+    color: #16a34a;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.skill-card.missing .skill-source {
+    color: #dc2626;
+    cursor: pointer;
+}
+
+/* Opportunity Recommendations */
+.opportunity-recommendations {
+    margin-bottom: 40px;
+}
+
+.opportunity-recommendations h2, .learning-paths h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.opportunity-cards, .learning-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.opportunity-card, .learning-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.opportunity-card:hover, .learning-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.opportunity-card .opportunity-badge:not(.top-match) {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.opportunity-card h3, .learning-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.department, .learning-provider {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.match-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.match-bar {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.match-progress {
+    height: 100%;
+    background-color: #16a34a;
+    border-radius: 10px;
+}
+
+.match-text {
+    font-weight: 600;
+    color: #16a34a;
+    font-size: 14px;
+}
+
+.opportunity-description, .learning-description {
+    color: #475569;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.opportunity-details, .learning-details {
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 8px;
+}
+
+.detail-label {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.detail-value {
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.view-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Learning Cards */
+.learning-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .opportunity-cards, .learning-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .career-path-section {
+        padding: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skills-count {
+        margin-top: 5px;
+    }
+}
+
+.unlocked-opportunities-section {
+    margin-bottom: 40px;
+}
+
+.unlocked-header {
+    margin-bottom: 24px;
+}
+
+.unlocked-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.new-skills-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.skill-pill {
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #7dd3fc;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.unlocked-by {
+    margin: 12px 0;
+}
+
+.unlock-label {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.unlock-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.unlock-skills .skill-tag {
+    background: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #7dd3fc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.unlocked-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.opportunity-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #f1f5f9;
+    color: #475569;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+} 

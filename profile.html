@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Skills with DT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-container">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-logo">
+                <img src="images/dt-logo.svg" alt="DT Logo" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Career Opportunities</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+            <div class="nav-right">
+                <img src="images/avatar.png" alt="User Avatar" class="nav-avatar">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Profile Content -->
+    <main>
+        <div class="profile-container">
+            <!-- Profile Header Section -->
+            <section class="profile-header">
+                <div class="profile-header-content">
+                    <div class="profile-image-container">
+                        <img src="images/profile-leo.jpg" alt="Profile Picture" class="profile-image">
+                        <button class="profile-edit-button">✏️</button>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name" id="profile-name">Leo Botosh</h1>
+                        <p class="profile-title" id="profile-title">Product Designer at Microsoft</p>
+                        <div class="profile-details">
+                            <div class="profile-detail">
+                                <i class="profile-icon">📍</i>
+                                <span id="profile-location">Seattle, WA</span>
+                            </div>
+                            <div class="profile-detail">
+                                <i class="profile-icon">👥</i>
+                                <span><span id="profile-connections">342</span> connections</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="audit-log.html" class="profile-privacy-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="privacy-icon">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            Data & Privacy
+                        </a>
+                        <button class="profile-status-button">
+                            <span>Open to Work</span>
+                            <i class="dropdown-icon">▼</i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Navigation Tabs -->
+            <div class="profile-tabs">
+                <div class="tab active">Profile</div>
+                <div class="tab">Activity</div>
+                <div class="tab">Network</div>
+                <div class="tab">Resources</div>
+            </div>
+
+            <!-- Profile Main Content -->
+            <div class="profile-content">
+                <!-- Skills Section -->
+                <section class="profile-section">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <img src="images/skills-icon.svg" alt="Skills Icon" class="section-icon">
+                            <h2>Skills</h2>
+                        </div>
+                        <div class="section-actions">
+                            <button class="edit-button" id="edit-skills-button">✏️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-container">
+                        <!-- Skills will be populated by JavaScript -->
+                    </div>
+                </section>
+                
+                <!-- Experience Section -->
+                <section class="profile-section">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <img src="images/experience-icon.svg" alt="Experience Icon" class="section-icon">
+                            <h2>Experience</h2>
+                        </div>
+                        <div class="section-actions">
+                            <button class="add-button">+ Add</button>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-container">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Side Panel -->
+            <div class="side-panel">
+                <!-- Contact Information -->
+                <section class="panel-section">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h3>Contact Information</h3>
+                        </div>
+                        <a href="#" class="view-link">View All</a>
+                    </div>
+                    
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">leo.botosh@example.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+1 (206) 555-1234</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Links</div>
+                            <a href="#" class="contact-link">Portfolio Website</a>
+                            <a href="#" class="contact-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Organization -->
+                <section class="panel-section">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <h3>Organization</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="org-label">Current</div>
+                    <div class="org-profile">
+                        <img src="images/microsoft-logo.png" alt="Microsoft Logo" class="org-avatar">
+                        <div>
+                            <div class="org-name">Microsoft</div>
+                            <div class="org-title">Technology • 250,000+ employees</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Skills Modal -->
+    <div class="modal" id="skills-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Skills</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-container">
+                    <input type="text" placeholder="Type to search and add skills" class="skill-search">
+                </div>
+                <div class="skills-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-button">Cancel</button>
+                <button class="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html> 
